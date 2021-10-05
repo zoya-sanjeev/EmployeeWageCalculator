@@ -1,12 +1,11 @@
-//UC1 IF ELSE Condition
 {
     const IS_ABSENT = 0
     let empCheck = Math.floor(Math.random() * 10) % 2;
     if( empCheck == IS_ABSENT){
-        console.log("UC1 - Employee is Absent. Exiting to program");
+        console.log(" Employee is Absent. Exiting to program");
         return;
     }else {
-        console.log("UC1 - Employee is PRESENT");
+        console.log("Employee is PRESENT");
     }
 }
 
@@ -17,22 +16,6 @@ const PART_TIME_HOURS = 4;
 const FULL_TIME_HOURS = 8;
 const WAGE_PER_HOUR = 20;
 
-let employeeHours = 0;
-let empCheck = Math.floor(Math.random() * 10) % 3;
-switch(empCheck){
-    case IS_PART_TIME: 
-            employeeHours = PART_TIME_HOURS;
-            break;
-    case IS_FULL_TIME:
-            employeeHours = FULL_TIME_HOURS;
-            break;
-    default: 
-            employeeHours = 0
-}
-let employeeWage = employeeHours * WAGE_PER_HOUR;
-console.log("UC2- Employee Wage: " + employeeWage);
-
-//UC3
 function getWorkingHours(empCheck){
     switch(empCheck){
         case IS_PART_TIME:
@@ -43,6 +26,7 @@ function getWorkingHours(empCheck){
             return 0;
     }
 }
-employeeHours = getWorkingHours(empCheck);
-employeeWage = employeeHours * WAGE_PER_HOUR;
-console.log("UC3 Employee Wage: "+ employeeWage);
+let empCheck = Math.floor(Math.random() * 10) % 3;
+let employeeHours = getWorkingHours(empCheck);
+let employeeWage = employeeHours * WAGE_PER_HOUR;
+console.log("Employee Wage: "+ employeeWage);
