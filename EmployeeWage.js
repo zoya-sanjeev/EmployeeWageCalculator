@@ -36,3 +36,11 @@ while(totalEmployeeHours<=MAX_HOURS_IN_MONTH &&
 }
 let employeeWage = calcDailyWage(totalEmployeeHours);
 console.log("Total Days: "+ totalWorkingDays+" Total Hours: "+ totalEmployeeHours+" Employee Wage: "+ employeeWage);
+
+let totalWage=0;
+function sum(dailyWage){
+    totalWage+=dailyWage;
+}
+empDailyWageArr.forEach(sum);
+console.log("UC7A- Total Days: "+ totalWorkingDays+ " Total hours: "
+        + totalEmployeeHours + " Emp Wage: "+ totalWage);
