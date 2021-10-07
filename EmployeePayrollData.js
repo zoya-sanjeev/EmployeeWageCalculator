@@ -32,7 +32,11 @@ class EmployeePayrollData {
     }
     get salary() { return this._salary; }
     set salary(salary) {
-        this._salary = salary;
+        let regxSalary = RegExp('^[1-9][0-9]*$');
+        if (regxSalary.test(salary))
+            this._salary = salary;
+        else
+            throw "Salary is incorrect";
     }
     get gender() { return this._gender; }
     set gender(gender) {
