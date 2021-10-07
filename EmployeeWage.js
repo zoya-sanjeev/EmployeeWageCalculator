@@ -66,3 +66,8 @@ let partWorkingDayStrArr = empDailyHoursAndWageArr
                             .filter(dailyHrsAndWage=> dailyHrsAndWage.dailyHours==4)
                             .map(dailyHrsAndWage=> dailyHrsAndWage.toString());
 console.log("\n UC11C PartWorkingDaysStrings:"+ partWorkingDayStrArr);
+
+let nonWorkingDayStrArr = empDailyHoursAndWageArr
+                            .filter(dailyHrsAndWage=> dailyHrsAndWage.dailyHours==0)
+                            .map(dailyHrsAndWage=> dailyHrsAndWage.toString());
+console.log("\n UC11D NonWorkingDaysStrings:"+ nonWorkingDayStrArr);
