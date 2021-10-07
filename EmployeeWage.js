@@ -57,4 +57,8 @@ let totalWages = empDailyHoursAndWageArr
 let totalHours = empDailyHoursAndWageArr
                 .filter(dailyHrsAndWage=> dailyHrsAndWage.dailyWage > 0)
                 .reduce((totalHours, dailyHrsAndWage) => totalHours += dailyHrsAndWage.dailyHours,0);
-console.log("UC11 Total Hours:" + totalHours+" Total Wage: "+ totalWages);
+console.log("UC11A Total Hours:" + totalHours+" Total Wage: "+ totalWages);
+process.stdout.write("UC11B Logging full work days")
+empDailyHoursAndWageArr.filter(dailyHrsAndWage => dailyHrsAndWage.dailyHours== 8)
+                        .forEach(dailyHrsAndWage => process.stdout.write(dailyHrsAndWage.toString()));
+
