@@ -17,7 +17,10 @@ class EmployeePayrollData {
     //getter and setter
     get name() { return this._name; }
     set name(name) {
-        this._name = name;
+        let nameRegex = RegExp('^[A-Z]{1}[a-z]{2,}$');
+        if(nameRegex.test(name))
+            this._name = name;
+        else throw 'Name is Incorrect';
     }
     get id() { return this._id; }
     set id(id) {
