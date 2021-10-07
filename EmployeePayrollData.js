@@ -40,7 +40,11 @@ class EmployeePayrollData {
     }
     get gender() { return this._gender; }
     set gender(gender) {
-        this._gender = gender;
+        let rgxGender = RegExp('^[M|F]$');
+        if (rgxGender.test(gender))
+            this._gender = gender;
+        else 
+            throw "Gender is incorrect";
     }
     get startDate() { return this._startDate; }
     set startDate(startDate) {
