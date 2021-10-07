@@ -62,3 +62,7 @@ process.stdout.write("UC11B Logging full work days")
 empDailyHoursAndWageArr.filter(dailyHrsAndWage => dailyHrsAndWage.dailyHours== 8)
                         .forEach(dailyHrsAndWage => process.stdout.write(dailyHrsAndWage.toString()));
 
+let partWorkingDayStrArr = empDailyHoursAndWageArr
+                            .filter(dailyHrsAndWage=> dailyHrsAndWage.dailyHours==4)
+                            .map(dailyHrsAndWage=> dailyHrsAndWage.toString());
+console.log("\n UC11C PartWorkingDaysStrings:"+ partWorkingDayStrArr);
