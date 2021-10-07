@@ -24,7 +24,11 @@ class EmployeePayrollData {
     }
     get id() { return this._id; }
     set id(id) {
-        this._id = id;
+        let regxId = RegExp('^[1-9][0-9]*$');
+        if (regxId.test(id))
+            this._id = id;
+        else
+            throw "Id is incorrect";
     }
     get salary() { return this._salary; }
     set salary(salary) {
